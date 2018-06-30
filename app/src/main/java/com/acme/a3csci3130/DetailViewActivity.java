@@ -42,7 +42,6 @@ public class DetailViewActivity extends Activity {
 
     public void updateContact(View v){
         //TODO: Update contact funcionality
-        data = FirebaseDatabase.getInstance().getReference();
         String personID = receivedPersonInfo.uid;
         String Businessnumber = BusinessnumberField.getText().toString();
         String Name = NameField.getText().toString();
@@ -50,6 +49,7 @@ public class DetailViewActivity extends Activity {
         String Address = AddressField.getText().toString();
         String Provinceterritory = ProvinceterritoryField.getText().toString();
 
+        data = FirebaseDatabase.getInstance().getReference();
         data.child("contacts").child(personID).child("Address").setValue(Address);
         data.child("contacts").child(personID).child("Businessnumber").setValue(Businessnumber);
         data.child("contacts").child(personID).child("Name").setValue(Name);
@@ -60,9 +60,10 @@ public class DetailViewActivity extends Activity {
 
     public void eraseContact(View v)
     {
-        //TODO: Erase contact functionality
-        data = FirebaseDatabase.getInstance().getReference();
+        //TODO: Erase contact functionalit\
         String personID = receivedPersonInfo.uid;
+
+        data = FirebaseDatabase.getInstance().getReference();
         data.child("contacts").child(personID).removeValue();
         finish();
     }
