@@ -62,15 +62,15 @@
         android:layout_marginStart="8dp" />
 
     <Button
-        android:id="@+id/submitButton1"
+        android:id="@+id/submitButton_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="190dp"
+        android:layout_marginBottom="150dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:onClick="submitInfoButton"
-        android:text="Create Contact"
+        android:text="SUBMIT"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintHorizontal_bias="0.500"
