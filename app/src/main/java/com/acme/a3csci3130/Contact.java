@@ -15,7 +15,7 @@ public class Contact implements Serializable {
 
     public  String businessNumber;
     public  String name;
-    public  String primBusiness;
+    public  String primbusiness;
     public String address;
     public String province;
     public String uid;
@@ -24,12 +24,12 @@ public class Contact implements Serializable {
         // Default constructor required for calls to DataSnapshot.getValue
     }
 
-    public Contact(String uid, String name, String businessNumber,String primBusiness,String province,String address){
+    public Contact(String uid, String name, String businessNumber,String primbusiness,String province,String address){
         this.uid = uid;
         this.name = name;
         this.businessNumber = businessNumber;
         this.address = address;
-        this.primBusiness = primBusiness;
+        this.primbusiness = primbusiness;
         this.province = province;
     }
 
@@ -38,9 +38,9 @@ public class Contact implements Serializable {
         HashMap<String, Object> result = new HashMap<>();
         result.put("uid", uid);
         result.put("name", name);
-        result.put("businessNumber", businessNumber);
+        result.put("business Number", businessNumber);
         result.put("address", address);
-        result.put("primBusiness", primBusiness);
+        result.put("primary business", primbusiness);
         result.put("province",province);
 
         return result;
