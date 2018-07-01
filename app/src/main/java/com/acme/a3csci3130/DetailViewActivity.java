@@ -34,7 +34,7 @@ public class DetailViewActivity extends Activity {
         if(receivedPersonInfo != null){
             BusinessnumberField.setText(receivedPersonInfo.businessNumber);
             NameField.setText(receivedPersonInfo.name);
-            PrimaryBusinessField.setText(receivedPersonInfo.primBusiness);
+            PrimaryBusinessField.setText(receivedPersonInfo.primbusiness);
             AddressField.setText(receivedPersonInfo.address);
             ProvinceterritoryField.setText(receivedPersonInfo.province);
         }
@@ -43,18 +43,19 @@ public class DetailViewActivity extends Activity {
     public void updateContact(View v){
         //TODO: Update contact funcionality
         String personID = receivedPersonInfo.uid;
+
         String Businessnumber = BusinessnumberField.getText().toString();
         String Name = NameField.getText().toString();
         String PrimaryBusiness = PrimaryBusinessField.getText().toString();
         String Address = AddressField.getText().toString();
         String Provinceterritory = ProvinceterritoryField.getText().toString();
 
-        data = FirebaseDatabase.getInstance().getReference();
-        data.child("contacts").child(personID).child("Address").setValue(Address);
-        data.child("contacts").child(personID).child("Businessnumber").setValue(Businessnumber);
-        data.child("contacts").child(personID).child("Name").setValue(Name);
-        data.child("contacts").child(personID).child("Primarybusiness").setValue(PrimaryBusiness);
-        data.child("contacts").child(personID).child("Proviceterritory").setValue(Provinceterritory);
+        data = FirebaseDatabase.getInstance().getReference("Contact");
+        data.child(personID).child("Address").setValue(Address);
+        data.child(personID).child("Businessnumber").setValue(Businessnumber);
+        data.child(personID).child("Name").setValue(Name);
+        data.child(personID).child("Primarybusiness").setValue(PrimaryBusiness);
+        data.child(personID).child("Proviceterritory").setValue(Provinceterritory);
 
     }
 
@@ -63,8 +64,8 @@ public class DetailViewActivity extends Activity {
         //TODO: Erase contact functionalit\
         String personID = receivedPersonInfo.uid;
 
-        data = FirebaseDatabase.getInstance().getReference();
-        data.child("contacts").child(personID).removeValue();
+        data = FirebaseDatabase.getInstance().getReference("Contact");
+        data.child(personID).removeValue();
         finish();
     }
 }

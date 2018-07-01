@@ -7,9 +7,9 @@
     tools:context="com.acme.a3csci3130.CreateContactAcitivity">
 
     <EditText
+        android:id="@+id/businessnumber"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:id="@+id/businessnumber"
         android:hint = "Business number"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
@@ -62,7 +62,7 @@
         android:layout_marginStart="8dp" />
 
     <Button
-        android:id="@+id/submitButton"
+        android:id="@+id/submitButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="190dp"

@@ -21,17 +21,18 @@ public class CreateContactAcitivity extends Activity {
         //Get the app wide shared variables
         appState = ((MyApplicationData) getApplicationContext());
 
-        submitButton = (Button) findViewById(R.id.submitButton);
-        BusinessnumberField = (EditText) findViewById(R.id.businessnumberIn);
-        NameField = (EditText) findViewById(R.id.nameIn);
-        PrimaryBusinessField = (EditText) findViewById(R.id.primarybusinessIn);
-        AddressField = (EditText) findViewById(R.id.addressIn);
-        ProvinceterritoryField = (EditText) findViewById(R.id.provinceterritoryIn);
+        submitButton = (Button) findViewById(R.id.submitButton1);
+        BusinessnumberField = (EditText) findViewById(R.id.businessnumber);
+        NameField = (EditText) findViewById(R.id.name);
+        PrimaryBusinessField = (EditText) findViewById(R.id.primarybusiness);
+        AddressField = (EditText) findViewById(R.id.address);
+        ProvinceterritoryField = (EditText) findViewById(R.id.provinceterritory);
     }
 
     public void submitInfoButton(View v) {
         //each entry needs a unique ID
         String personID = appState.firebaseReference.push().getKey();
+
         String Businessnumber = BusinessnumberField.getText().toString();
         String Name = NameField.getText().toString();
         String PrimaryBusiness = PrimaryBusinessField.getText().toString();

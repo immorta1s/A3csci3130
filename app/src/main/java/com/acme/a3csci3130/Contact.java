@@ -40,7 +40,7 @@ public class Contact implements Serializable {
         result.put("name", name);
         result.put("business Number", businessNumber);
         result.put("address", address);
-        result.put("primary business", primbusiness);
+        result.put("primbusiness", primbusiness);
         result.put("province",province);
 
         return result;
